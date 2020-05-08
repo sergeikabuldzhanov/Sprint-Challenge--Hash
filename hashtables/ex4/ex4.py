@@ -3,8 +3,14 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-
-    return result
+    positives = {}
+    ans = []
+    for num in a:
+        if abs(num) in positives:
+            ans+= [abs(num)]
+        else:
+            positives[abs(num)] = None
+    return ans
 
 
 if __name__ == "__main__":
